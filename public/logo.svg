@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.7 -2.8 3.4 5.6" role="img" aria-label="SkillSwap logo">
+  <defs>
+    <linearGradient id="ss-blue" gradientUnits="userSpaceOnUse" x1="0.9" y1="-2" x2="-0.4" y2="0.4">
+      <stop offset="0" stop-color="#3FD4FF"/>
+      <stop offset="0.55" stop-color="#00BFFF"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="ss-orange" gradientUnits="userSpaceOnUse" x1="-0.9" y1="2" x2="0.4" y2="-0.4">
+      <stop offset="0" stop-color="#FFC857"/>
+      <stop offset="0.55" stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#F0700A"/>
+    </linearGradient>
+    <linearGradient id="ss-sheen" gradientUnits="userSpaceOnUse" x1="0" y1="-2.6" x2="0" y2="2.6">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Blue arrow: wraps the top of the S, head pointing right -->
+  <path d="M 0 0 A 1 1 0 0 1 0 -2 L 0.52 -2"
+        fill="none" stroke="url(#ss-blue)" stroke-width="0.52"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1.04 -2 L 0.46 -2.44 L 0.46 -1.56 Z"
+        fill="#2FCBFF" stroke="#2FCBFF" stroke-width="0.14" stroke-linejoin="round"/>
+
+  <!-- Orange arrow: wraps the bottom of the S, head pointing left -->
+  <path d="M 0 0 A 1 1 0 0 1 0 2 L -0.52 2"
+        fill="none" stroke="url(#ss-orange)" stroke-width="0.52"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -1.04 2 L -0.46 2.44 L -0.46 1.56 Z"
+        fill="#FFB13D" stroke="#FFB13D" stroke-width="0.14" stroke-linejoin="round"/>
+
+  <!-- top-light sheen over both ribbons -->
+  <path d="M 0 0 A 1 1 0 0 1 0 -2 L 0.52 -2"
+        fill="none" stroke="url(#ss-sheen)" stroke-width="0.52"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 0 A 1 1 0 0 1 0 2 L -0.52 2"
+        fill="none" stroke="url(#ss-sheen)" stroke-width="0.52"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
