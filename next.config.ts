@@ -3,9 +3,12 @@ import type { NextConfig } from "next";
 // HTTP security headers (OWASP recommended baseline).
 // CSP is intentionally not set here yet: inline styles/scripts from Next +
 // Supabase websockets need a carefully built policy — see docs/SECURITY.md.
+const isDev = process.env.NODE_ENV !== "production";
+
 const securityHeaders = [
-	// Clickjacking: this app has no legitimate embedding use case.
-	{ key: "X-Frame-Options", value: "DENY" },
+	// Clickjacking: this app has no legitimate embedding use case in production.
+	// Skipped in dev so local preview tooling can embed the dev server.
+	...(isDev ? [] : [{ key: "X-Frame-Options", value: "DENY" }]),
 	// Stop MIME-sniffing uploaded files into executable content.
 	{ key: "X-Content-Type-Options", value: "nosniff" },
 	// Don't leak full URLs (which can contain ids) cross-origin.
